@@ -5,6 +5,7 @@ import (
 	"log"
 
 	"github.com/go-sql-driver/mysql"
+
 	"github.com/pandfun/blog/cmd/api"
 	"github.com/pandfun/blog/config"
 	"github.com/pandfun/blog/db"
