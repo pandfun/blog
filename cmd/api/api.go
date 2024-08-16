@@ -7,6 +7,7 @@ import (
 
 	"github.com/gorilla/mux"
 
+	"github.com/pandfun/blog/service/post"
 	"github.com/pandfun/blog/service/user"
 )
 
@@ -27,6 +28,11 @@ func (s *APIServer) Run() error {
 	userStore := user.NewStore(s.db)
 	userHandler := user.NewHandler(userStore)
 	userHandler.RegisterRoutes(subrouter)
+
+	// Registering post routes
+	postStore := post.NewStore(s.db)
+	postHandler := post.NewHandler(postStore)
+	postHandler.RegisterRoutes(subrouter)
 
 	log.Println("Server: Listening on", s.addr)
 

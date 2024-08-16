@@ -9,6 +9,7 @@ type Config struct {
 	DBName                 string
 	JWTExpirationInSeconds int64
 	JWTSecret              string
+	ImageURL               string
 }
 
 var Envs = initConfig()
@@ -25,5 +26,6 @@ var Envs = initConfig()
 // 		DBName:                 "db name",
 // 		JWTSecret:              "your-secret-here",
 // 		JWTExpirationInSeconds: 3600 * 24 * 7, // 1 week
+// 		ImageURL:               "https://images.pexels.com/photos/27567342/pexels-photo-27567342/free-photo-of-a-barn-sits-on-a-hillside-in-the-middle-of-a-field.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 // 	}
 // }

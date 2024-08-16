@@ -1,2 +1,3 @@
 config/init_config.go
-/bin
+bin/
+.vscode/
